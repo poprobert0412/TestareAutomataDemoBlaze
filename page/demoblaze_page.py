@@ -54,3 +54,37 @@ class DemoBlazePage(BasePage):
         self.chrome.find_element(By.XPATH, '//button[@class="btn btn-success"]').click()
 
     def name_robert(self):
+        name = WebDriverWait(self.chrome, 10).until(EC.visibility_of_element_located((By.ID, 'name')))
+        name.send_keys("Robert")
+
+    def country(self):
+        name = WebDriverWait(self.chrome, 10).until(EC.visibility_of_element_located((By.ID, 'country')))
+        name.send_keys("Romania")
+
+    def city(self):
+        name = WebDriverWait(self.chrome, 10).until(EC.visibility_of_element_located((By.ID, 'city')))
+        name.send_keys("Brasov")
+
+    def credit_card(self):
+        name = WebDriverWait(self.chrome, 10).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="card"]')))
+        name.send_keys("1234567891011")
+
+    def month(self):
+        name = WebDriverWait(self.chrome, 10).until(EC.visibility_of_element_located((By.ID, 'month')))
+        name.send_keys("8")
+
+    def year(self):
+        name = WebDriverWait(self.chrome, 10).until(EC.visibility_of_element_located((By.ID, 'year')))
+        name.send_keys("2028")
+
+    def purchase_button(self):
+        time.sleep(15)
+        ok_button = WebDriverWait(self.chrome, 10).until(
+            EC.visibility_of_element_located((By.XPATH,'//*[@onclick="purchaseOrder()"]')))
+        ok_button.click()
+
+    def ok_button(self):
+        ok_button = WebDriverWait(self.chrome, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '/html/body/div[10]/div[7]/div/button')))
+        ok_button.click()
+

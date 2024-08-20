@@ -70,43 +70,39 @@ def step_impl(context):
 @then(u'I input in the "Name" field "Robert"')
 def step_impl(context):
     print(u'STEP: Then I input in the "Name" field "Robert"')
-
+    context.demoblaze_page.name_robert()
 
 @then(u'I input in the "Country" field "Romania"')
 def step_impl(context):
     print(u'STEP: Then I input in the "Country" field "Romania"')
-
+    context.demoblaze_page.country()
 
 @then(u'I input in the "City" field "Brasov"')
 def step_impl(context):
     print(u'STEP: Then I input in the "City" field "Brasov"')
+    context.demoblaze_page.city()
 
-
-@then(u'I input in the "Credit card" field "123456789"')
+@then(u'I input in the "Credit card" field "1234567891011"')
 def step_impl(context):
-    print(u'STEP: Then I input in the "Credit card" field "123456789"')
-
+    print(u'STEP: Then I input in the "Credit card" field "1234567891011"')
+    context.demoblaze_page.credit_card()
 
 @then(u'I input in the "Month" field "8"')
 def step_impl(context):
     print(u'STEP: Then I input in the "Month" field "8"')
+    context.demoblaze_page.month()
 
-
-@then(u'I input in the "Year" field "2024"')
+@then(u'I input in the "Year" field "2028"')
 def step_impl(context):
-    print(u'STEP: Then I input in the "Year" field "2024"')
-
+    print(u'STEP: Then I input in the "Year" field "2028"')
+    context.demoblaze_page.year()
 
 @then(u'I press on the "Purchase" button')
 def step_impl(context):
     print(u'STEP: Then I press on the "Purchase" button')
+    context.demoblaze_page.purchase_button()
 
-
-@then(u'I should see a confirmation pop-up with the order ID, amount paid, card number, name, and date')
+@then(u'I should see a confirmation pop-up and press the "OK" button')
 def step_impl(context):
-    print(u'STEP: Then I should see a confirmation pop-up with the order ID, amount paid, card number, name, and date')
-
-
-@then(u'I press on the "OK" button')
-def step_impl(context):
-    print(u'STEP: Then I press on the "OK" button')
+    print(u'STEP: I should see a confirmation pop-up and press the "OK" button')
+    context.demoblaze_page.ok_button()

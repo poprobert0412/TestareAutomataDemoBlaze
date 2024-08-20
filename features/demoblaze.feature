@@ -21,9 +21,8 @@ Feature: Test the DemoBlaze website
     And I input in the "Name" field "Robert"
     And I input in the "Country" field "Romania"
     And I input in the "City" field "Brasov"
-    And I input in the "Credit card" field "123456789"
+    And I input in the "Credit card" field "1234567891011"
     And I input in the "Month" field "8"
-    And I input in the "Year" field "2024"
+    And I input in the "Year" field "2028"
     And I press on the "Purchase" button
-    Then I should see a confirmation pop-up with the order ID, amount paid, card number, name, and date
-    And I press on the "OK" button
+    Then I should see a confirmation pop-up and press the "OK" button
