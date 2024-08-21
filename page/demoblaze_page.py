@@ -78,9 +78,8 @@ class DemoBlazePage(BasePage):
         name.send_keys("2028")
 
     def purchase_button(self):
-        time.sleep(15)
         ok_button = WebDriverWait(self.chrome, 10).until(
-            EC.visibility_of_element_located((By.XPATH,'//*[@onclick="purchaseOrder()"]')))
+            EC.visibility_of_element_located((By.XPATH, '//*[@onclick="purchaseOrder()"]')))
         ok_button.click()
 
     def ok_button(self):

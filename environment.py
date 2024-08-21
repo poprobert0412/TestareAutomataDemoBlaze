@@ -9,3 +9,5 @@ def before_all(context):
 
 def after_all(context):
     context.browser.close()
+
+#Ca sa printam report ul dupa ce implementam fisierul ini trebuie sa scriem asta: behave -f html -o report.html
